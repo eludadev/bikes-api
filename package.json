@@ -1,10 +1,11 @@
 {
   "name": "starter-express-api",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "env-cmd nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,16 @@
   },
   "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cyclic-dynamodb": "^0.0.27",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "runtypes": "^6.6.0",
+    "slugify": "^1.6.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.19"
   }
 }
