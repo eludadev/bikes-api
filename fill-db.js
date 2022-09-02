@@ -46,7 +46,7 @@ async function fillDataBaseWithBikes() {
   const totalBikes = 25;
   const randomBikes = Array(totalBikes).fill({}).map(bikeAccessor);
 
-  const db = DynamoDb(process.env.DYNAMO_DB);
+  const db = DynamoDb(process.env.CYCLIC_DB);
   const bikesCollection = db.collection("bikes");
 
   let i = 1;
