@@ -12,7 +12,7 @@ curl http://localhost:3000/bikes/all | jq .
 ### Get bike by ID
 
 ```bash
-curl http://localhost:3000/bikes/by-id/<ID> | jq . # replace <ID> with an ID from the response to /all
+curl http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
 
 ### Get bike by Handle

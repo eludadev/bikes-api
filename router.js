@@ -30,7 +30,7 @@ router.get("/all", async (req, res) => {
 });
 
 // Get bike by ID
-router.get("/by-id/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = req.params.id;
 
   try {
