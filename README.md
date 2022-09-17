@@ -90,7 +90,7 @@ curl -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" http:
 
 ```bash
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
-curl -X PUT -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" http://localhost:3000/bikes/by-id/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
+curl -X PUT -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
 
 
@@ -109,14 +109,14 @@ curl -X PUT -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json
 
 ```bash
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
-curl -X PATCH -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" http://localhost:3000/bikes/by-id/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
+curl -X PATCH -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
 
 ### Delete existing bike
 
 ```bash
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
-curl -X DELETE -H "Authorization: Bearer $TOKEN" http://localhost:3000/bikes/by-id/<ID> | jq . # replace <ID> with an ID from the response to /all
+curl -X DELETE -H "Authorization: Bearer $TOKEN" http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
 
 ## Authentication

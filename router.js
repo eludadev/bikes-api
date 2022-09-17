@@ -143,7 +143,7 @@ router.post("/", authenticateUser, async (req, res) => {
 // ------------------------------------
 
 // Patch bike if it exists
-router.patch("/by-id/:id", authenticateUser, async (req, res) => {
+router.patch("/:id", authenticateUser, async (req, res) => {
   const bikeId = req.params.id;
   const newData = req.body || {};
 
@@ -169,7 +169,7 @@ router.patch("/by-id/:id", authenticateUser, async (req, res) => {
 // ------------------------------------
 
 // Update entire bike
-router.put("/by-id/:id", authenticateUser, async (req, res) => {
+router.put("/:id", authenticateUser, async (req, res) => {
   const bikeId = req.params.id;
   const bikeData = req.body;
 
@@ -205,7 +205,7 @@ router.put("/by-id/:id", authenticateUser, async (req, res) => {
 // ------------------------------------
 
 // Delete bike if it exists
-router.delete("/by-id/:id", authenticateUser, async (req, res) => {
+router.delete("/:id", authenticateUser, async (req, res) => {
   const bikeId = req.params.id;
 
   try {
