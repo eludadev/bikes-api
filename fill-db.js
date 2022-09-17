@@ -46,16 +46,13 @@ async function fillDataBaseWithBikes() {
   const totalBikes = 25;
   const randomBikes = Array(totalBikes).fill({}).map(bikeAccessor);
 
-  const db = DynamoDb(process.env.CYCLIC_DB);
+  const db = DynamoDb(process.env.DYNAMO_DB);
   const bikesCollection = db.collection("bikes");
 
-  let i = 1;
-  for (const bike of randomBikes) {
-    console.log(`Adding bike ${i}/${totalBikes}...`);
-    await bikesCollection.set(bike.id, bike);
-
-    i++;
-  }
+  await Promise.allSettled(
+    randomBikes.map((bike) => bikesCollection.set(bike.id, bike))
+  );
+  console.log(`Added ${totalBikes} new bikes.`);
 }
 
 fillDataBaseWithBikes();
