@@ -1,5 +1,11 @@
 # Bikes API, with Cyclic 🚲️
 
+## Fill Database with Mock Data
+
+```bash
+npm run fill-db # fills database with 25 mock bike items
+```
+
 ## Fetching Bikes
 ![GET routes](./assets/GET%20Routes.png)
 
