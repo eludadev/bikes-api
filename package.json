@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "env-cmd nodemon index.js"
+    "dev": "env-cmd nodemon index.js",
+    "fill-db": "env-cmd node fill-db.js"
   },
   "repository": {
     "type": "git",
