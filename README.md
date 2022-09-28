@@ -1,5 +1,9 @@
 # Bikes API, with Cyclic 🚲️
 
+## Deploy on Cyclic 🚀
+
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/eludadev/bikes-api)
+
 ## Fill Database with Mock Data
 
 ```bash
