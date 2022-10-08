@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd landing && npm install && npm run build && cd .. && env-cmd node index.js",
+    "start": "cd landing && npm install && npm run build && cd .. && node index.js",
     "dev": "env-cmd nodemon index.js",
     "fill-db": "env-cmd node fill-db.js",
     "postinstall": "husky install",
