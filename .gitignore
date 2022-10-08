@@ -1,2 +1,37 @@
 node_modules
 .env
+
+# dependencies
+./landing/node_modules
+./landing/.pnp
+./landing/.pnp.js
+
+# testing
+./landing/coverage
+
+# next.js
+./landing/.next/
+./landing/out/
+
+# production
+./landing/build
+
+# misc
+./landing/.DS_Store
+./landing/*.pem
+
+# debug
+./landing/npm-debug.log*
+./landing/yarn-debug.log*
+./landing/yarn-error.log*
+./landing/.pnpm-debug.log*
+
+# local env files
+./landing/.env*.local
+
+# vercel
+./landing/.vercel
+
+# typescript
+./landing/*.tsbuildinfo
+./landing/next-env.d.ts

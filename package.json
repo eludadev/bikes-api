@@ -1,23 +1,23 @@
 {
-  "name": "starter-express-api",
+  "name": "bikes-api",
   "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "cd landing && npm install && npm run build && cd .. && env-cmd nodemon index.js",
     "dev": "env-cmd nodemon index.js",
-    "fill-db": "env-cmd node fill-db.js"
+    "fill-db": "env-cmd node fill-db.js",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+    "url": "git+https://github.com/eludadev/bikes-api.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cyclic-software/starter-express-api/issues"
-  },
-  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
+  "license": "MIT",
+  "homepage": "https://bikes.cyclic.app/",
   "dependencies": {
     "cyclic-dynamodb": "^0.0.27",
     "express": "^4.17.1",
@@ -29,6 +29,8 @@
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
     "env-cmd": "^10.1.0",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "husky": "^8.0.1",
+    "pinst": "^3.0.0"
   }
 }
