@@ -5,12 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd ./landing && echo 'in landing' && npm install && echo 'installed' && npm run build && echo 'built' && cd .. && echo 'back' && node index.js",
     "dev": "env-cmd nodemon index.js",
-    "fill-db": "env-cmd node fill-db.js",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "fill-db": "env-cmd node fill-db.js"
   },
   "repository": {
     "type": "git",
@@ -29,8 +25,6 @@
   "devDependencies": {
     "@faker-js/faker": "^7.5.0",
     "env-cmd": "^10.1.0",
-    "nodemon": "^2.0.19",
-    "husky": "^8.0.1",
-    "pinst": "^3.0.0"
+    "nodemon": "^2.0.19"
   }
 }
